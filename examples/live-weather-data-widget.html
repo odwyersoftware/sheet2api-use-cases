@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Today's Weather Website Widget using a Spreadsheet</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-text, .card-title { text-shadow: 1px 1px #333;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br/>
+        <h1>Today's Weather Website Widget using a Spreadsheet</h1>
+        <br/>
+        <div data-spreadsheet-api="https://sheet2api.com/v1/FgI6zV8qT121/use-case-weather-widget">
+            {% verbatim %}
+            <div class="card bg-dark text-white" style="width: 500px; height: 250px; background: url({{ Image }}); background-size: cover; ">
+                <div class="card-img-overlay">
+                    <h5 class="card-title"><b>City: {{ Location }}</b></h5>
+                    <p class="card-text"><b>Min: {{ Min Temp }}℃</b></p>
+                    <p class="card-text"><b>Max: {{ Max Temp }}℃</b></p>
+                    <p class="card-text"><b>🌅 Sunrise: {{ Sunrise }}</b></p>
+                    <p class="card-text"><b>🌇 Sunset: {{ Sunset }}</b></p>
+                </div>
+            </div>
+            {% endverbatim %}
+            <br/>
+        </div>
+        <script src="https://sheet2api.com/v1/template.js"></script>
+    </div>
+</body>
+</html>
