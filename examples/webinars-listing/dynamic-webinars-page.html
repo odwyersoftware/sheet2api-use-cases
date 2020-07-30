@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Use Case Example - Upcoming Webinars, Powered by a Google/Excel Spreadsheet</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Webinars</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Upcoming Webinars</h1>
+                <p class="lead text-muted">Browse through some of the best collections of Webinar Events hand picked by
+                    people who know the area best.</p>
+            </div>
+        </section>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row" data-spreadsheet-api="https://sheet2api.com/v1/FgI6zV8qT121/use-case-webinars">
+                    <div class="col-md-4">
+                        <!-- webinar item start -->
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{image}}">
+                            <div class="card-body">
+                                <p class="card-text">{{title}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group mr-2">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Register</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                                    </div>
+                                    <small class="text-muted">{{date}}, {{time}}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- webinar item end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://sheet2api.com/v1/template.js"></script>
+</body>
+
+</html>
